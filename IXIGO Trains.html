@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IXIGO:Trains</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        .bgimg{
+            background-image: url("Project1.jpg");
+            width: 100%;
+            height:110vh;
+            background-size: 100%,100%;
+        }
+        .menu{
+            background-color: rgba(255, 246,205,0.6);
+            width: 100%;
+            height: 60px;
+        }
+        .left{
+            float:left;
+            width: 25%;
+        }
+        .right{
+            float:right;
+            width: 75%;
+        }
+       .left h2{
+            line-height: 60px;
+            padding: left 30px;
+            color:blue; 
+        }
+        .left h2:hover{
+            color: yellow;
+        }
+        .right ul{
+            margin-left: 400px;
+        }
+        .right ul li{
+            display:inline-block;
+            line-height: 60px;
+            margin-left: 30px;
+            font-weight: bold;
+            font-size: 18px;
+            color: brown;
+        }
+        .right ul li:hover{
+            color: aliceblue;
+        }
+        .textbox{
+            margin-top: 200px;
+            border: 2px solid gray;
+            width: 300px;
+            height: 300px;
+            border: radius 10px; 
+            margin-left: 200px;
+        }
+        input{
+            width:calc(100%-40px);
+            display:block;
+            margin:auto;
+            height: 30px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+            color: azure;
+            margin-bottom: 35px;
+            margin-top: 30px;
+            font-size: 40px;
+        }
+        #submit{
+            color: bisque;
+        }
+        #submit:hover{
+            background-color: orange;
+            color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="bgimg">
+      <div class="menu">
+        <div class="left">
+            <h2>IXIGO</h2>
+        </div>
+        <div class="right">
+            <ul>
+                <li>Home</li>
+                <li>SEARCH TRAINS</li>
+                <li>IRCTC Packages</li>
+                <li>About IRCTC</li>
+            </ul>
+        </div>
+    </div>
+    <div class="textbox">
+        <form action="php.text">
+        <h3>Welcome to IXIGO Trains</h3>
+        <input type="text" name="" id="" placeholder="From">
+        <input type="text" name="" id="" placeholder="To">    
+        <input type="date" name="" id="" placeholder="Date">
+        <input type="text" name="" id="" placeholder="Class">
+        <input type="search" name="" id="" placeholder="Check Availability">
+        <input type="submit" name="" id="" placeholder="Book Now">
+        </form>
+    </div>     
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</div></body></html>
